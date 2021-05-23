@@ -1,0 +1,323 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: 'Nunito', sans-serif !important;
+}
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  display:flex; 
+  flex-direction:column;
+  min-height: 100vh;
+  background-color: #ecf0f5 !important;
+}
+a {
+    text-decoration: none !important;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+ul {
+  list-style: none;
+}
+.file-upload{
+  display:block;
+  text-align:center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+.file-upload .file-select{
+  display:block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor:pointer;
+  height:40px;
+  line-height:40px;
+  text-align:left;
+  background:#FFFFFF;
+  overflow:hidden;
+  position:relative;
+}
+.file-upload .file-select .file-select-button{
+  background:#dce4ec;
+  padding:0 10px;
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.file-upload .file-select .file-select-name{
+  line-height:40px;
+  display:inline-block;
+  padding:0 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.file-upload .file-select:hover{
+  border-color:#34495e;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.file-upload .file-select:hover .file-select-button{
+  background:#34495e;
+  color:#FFFFFF;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.file-upload.active .file-select{
+  border-color:#3fa46a;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.file-upload.active .file-select .file-select-button{
+  background:#3fa46a;
+  color:#FFFFFF;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.file-upload .file-select input[type=file]{
+  z-index:100;
+  cursor:pointer;
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  opacity:0;
+  filter:alpha(opacity=0);
+}
+.file-upload .file-select.file-select-disabled{
+  opacity:0.65;
+}
+.file-upload .file-select.file-select-disabled:hover{
+  cursor:default;
+  display:block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor:pointer;
+  height:40px;
+  line-height:40px;
+  margin-top:5px;
+  text-align:left;
+  background:#FFFFFF;
+  overflow:hidden;
+  position:relative;
+}
+.file-upload .file-select.file-select-disabled:hover .file-select-button{
+  background:#dce4ec;
+  color:#666666;
+  padding:0 10px;
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+}
+.file-upload .file-select.file-select-disabled:hover .file-select-name{
+  line-height:40px;
+  display:inline-block;
+  padding:0 10px;
+}
+.magazine-upload{
+  display:block;
+  text-align:center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+.magazine-upload .magazine-select{
+  display:block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor:pointer;
+  height:40px;
+  line-height:40px;
+  text-align:left;
+  background:#FFFFFF;
+  overflow:hidden;
+  position:relative;
+}
+.magazine-upload .magazine-select .magazine-select-button{
+  background:#dce4ec;
+  padding:0 10px;
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.magazine-upload .magazine-select .magazine-select-name{
+  line-height:40px;
+  display:inline-block;
+  padding:0 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.magazine-upload .magazine-select:hover{
+  border-color:#34495e;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.magazine-upload .magazine-select:hover .magazine-select-button{
+  background:#34495e;
+  color:#FFFFFF;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.magazine-upload.active .magazine-select{
+  border-color:#3fa46a;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.magazine-upload.active .magazine-select .magazine-select-button{
+  background:#3fa46a;
+  color:#FFFFFF;
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+}
+.magazine-upload .magazine-select input[type=file]{
+  z-index:100;
+  cursor:pointer;
+  position:absolute;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  opacity:0;
+  filter:alpha(opacity=0);
+}
+.magazine-upload .magazine-select.magazine-select-disabled{
+  opacity:0.65;
+}
+.magazine-upload .magazine-select.magazine-select-disabled:hover{
+  cursor:default;
+  display:block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor:pointer;
+  height:40px;
+  line-height:40px;
+  margin-top:5px;
+  text-align:left;
+  background:#FFFFFF;
+  overflow:hidden;
+  position:relative;
+}
+.magazine-upload .magazine-select.file-select-disabled:hover .magazine-select-button{
+  background:#dce4ec;
+  color:#666666;
+  padding:0 10px;
+  display:inline-block;
+  height:40px;
+  line-height:40px;
+}
+.magazine-upload .magazine-select.magazine-select-disabled:hover .magazine-select-name{
+  line-height:40px;
+  display:inline-block;
+  padding:0 10px;
+}
+.search-field {
+  padding: 7px;
+  width: 300px;
+  max-width: 300px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  outline: none;
+}
+.search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.search-button img {
+  position: absolute;
+  right: 73.5%;
+  top: 218px;
+}
+@media (max-width: 1024px) {
+  .search-button img{
+    position: absolute;
+    left: 81%;
+    top: 218px;
+  }
+}
+@media (max-width: 576px) {
+  .search-button img{
+    position: absolute;
+    left: 81%;
+    top: 218px;
+  }
+}
+@media (max-width: 768px) {
+  .search-button img{
+    position: absolute;
+    left: 81%;
+    top: 218px;
+  }
+}
+@media (max-width: 991px) {
+  .search-button img{
+    position: absolute;
+    left: 81%;
+    top: 218px;
+  }
+}
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
