@@ -62,6 +62,6 @@ while ($row = mysqli_fetch_array($query)){
 <a href="#" style="margin: 0px 0px 0px 10px;"><img src="pics/instagram-icon.png" style="max-width: 30px;"></a>
 </div>
 <p style="font-size: 13px;margin-top: 2%;">&copy; 2021 NewsArea Middle East. All Rights Reserved</p>
-<p style="font-size: 13px;padding-bottom: 2%;">Designed & Developed By <a href="https://codux.me" target="_blank">Codux, Inc.</a></p>
+<p style="font-size: 13px;padding-bottom: 2%;">Designed & Developed By <a href="https://itgo-solutions.com" target="_blank">ITGO</a></p>
 </div>
 </footer>
