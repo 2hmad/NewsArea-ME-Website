@@ -3,7 +3,7 @@
 //$user = "xkshetzj_newsarea-admins";
 //$pass = "NewsAreaMiddleEast1";
 //$db = "xkshetzj_newsarea";
-$host = "us-cdbr-east-04.cleardb.com/";
+$host = "us-cdbr-east-04.cleardb.com";
 $user = "b31560f908280d";
 $pass = "5ed34ffc";
 $db = "heroku_a92d341879b202a";
