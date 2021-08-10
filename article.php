@@ -4,9 +4,9 @@
     <title><?php
     ob_start();
     $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "newsarea";
+    $user = "xkshetzj_newsarea-admins";
+    $pass = "NewsAreaMiddleEast1";
+    $db = "xkshetzj_newsarea";
     $connect = mysqli_connect($host, $user, $pass, $db); 
     mysqli_set_charset($connect, 'utf8');   
     $id = $_GET['id'];
@@ -16,13 +16,13 @@
     $id = $row['id'];
     $title = mysqli_real_escape_string($connect, $row['title']);
     $cover = $row['article_pic'];
-    $article_pic = $row['article_pic'];
+    $pic_name = $row['pic_name'];
     $short_desc = mysqli_real_escape_string($connect, $row['short_desc']);
     $long_desc = mysqli_real_escape_string($connect, $row['long_desc']);
     echo $title;
     }
     ?></title>
-    <meta property="og:image" content="<?php echo 'uploads/'.$article_pic ?>" />
+    <meta property="og:image" content="<?php echo 'uploads/'.$pic_name ?>" />
     <meta name="robots" content="all">
     <meta name="author" content="<?php echo $title; ?>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -47,9 +47,9 @@
     <meta name="twitter:description" content="<?php echo $short_desc;?>">
     <meta property="og:description" content="<?php echo $short_desc;?>">
     <meta property="og:site_name" content="NewsArea ME">
-    <meta itemprop="image" content="<?php echo 'https://newsarea-me.com/uploads/'.$article_pic ?>">
-    <meta name="twitter:image:src" content="<?php echo 'https://newsarea-me.com/uploads/'.$article_pic ?>">
-    <meta property="og:image" content="<?php echo 'https://newsarea-me.com/uploads/'.$article_pic ?>">
+    <meta itemprop="image" content="<?php echo 'https://newsarea-me.com/uploads/'.$pic_name ?>">
+    <meta name="twitter:image:src" content="<?php echo 'https://newsarea-me.com/uploads/'.$pic_name ?>">
+    <meta property="og:image" content="<?php echo 'https://newsarea-me.com/uploads/'.$pic_name ?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="article">
     <meta property="article:section" content="news">
@@ -57,7 +57,7 @@
     <meta name="twitter:label1" content="section">
     <meta property="og:url" content="<?php echo 'https://newsarea-me.com/article.php?id='.$id ?>">
     <meta name="theme-color" content="#fff">
-    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="vendor/style.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="pics/icon-name.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -65,7 +65,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <?php include('connection.php') ?>
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="vendor/all.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <meta charset="ISO-8859-1">
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5ffbaa2d4c4dcc0018f144e9&product=inline-share-buttons" async="async"></script>
@@ -125,8 +125,8 @@
             $short_desc = $row['short_desc'];
             $long_desc = $row['long_desc'];
             $category = $row['category'];
-          $article_pic = $row['article_pic'];
-            $article_pic = $row['article_pic'];
+          $pic_name = $row['pic_name'];
+            $pic_name = $row['pic_name'];
             $views = $row['views'];
             $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
             $query_author = mysqli_query($connect, $sql_author);
@@ -137,7 +137,7 @@
               }
             echo "
             <div class='big-card-article' style='height: 422px;'>
-              <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width: 100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'>
+              <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width: 100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'>
             </div>
             <span class='badge bg-dark' style='font-size: 14px;margin-top:3%;margin-bottom:2%'>$category</span>
             <h1 style='font-size: 1.7rem;font-weight: bold;'>$title</h1>
@@ -187,16 +187,7 @@
                     }
                   ?>
             </ul>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '720872ddd164615db30af254fd62710c',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/720872ddd164615db30af254fd62710c/invoke.js"></scr' + 'ipt>');
-</script>
+
       </div>
     </div>
     <h4 style="margin-top: 11%;font-weight:bold">Releated Articles</h4>
@@ -210,7 +201,7 @@
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
   $query_author = mysqli_query($connect, $sql_author);
   while ($row_author = mysqli_fetch_array($query_author)){
@@ -220,7 +211,7 @@ $article_pic = $row['article_pic'];
     echo "
     <div class='col-lg-4' style='margin-bottom:5%'>
     <a href='article.php?id=$id'>
-      <div style='width: 100%;height: 262px;'><img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'></div>
+      <div style='width: 100%;height: 262px;'><img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'></div>
         <span class='badge bg-dark' style='font-size: 14px;margin-top:1%'>$category</span>
         <p style='color:black;font-weight:bold;font-size: 1.2rem;'>$title</p>
         <p class='card-text' style='color: #6c757d!important'><img src='data:image/jpeg;base64,".base64_encode($profile_pic)."' alt='$author' style='width:40px;height:40px;object-fit: cover;object-fit: cover;border-radius:50%'> By <small class='text-muted' style='color:black !important;font-weight:bold'>$author</small></p>

@@ -28,11 +28,11 @@
             $id = $row['id'];
             $title = $row['title'];
             $date = $row['date'];
-          $article_pic = $row['article_pic'];
+            $article_pic = $row['article_pic'];
             echo "
             <div class='col-lg-3'>
             <div class='card' style='padding: 15px;'>
-                <img src='uploads/$article_pic' class='card-img-top' style='margin-bottom: 3%;'>
+                <img src='data:image/jpeg;base64,".base64_encode($article_pic)."' class='card-img-top' style='margin-bottom: 3%;'>
                 <a href='preview-article.php?id=$id' target='_blank' style='color:black;'><h3 style='font-size: 1.1rem;display:block;'>$title</h3></a>
                 <p style='color:#585858;margin-bottom:10%'>$date</p>
                 <a href='preview-article.php?id=$id' target='_blank'><button class='btn btn-outline-dark' style='width: 100%;'>Preview</button></a>

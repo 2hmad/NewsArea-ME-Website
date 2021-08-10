@@ -67,7 +67,7 @@
       <pubDate><?php echo "$newDate" ?></pubDate>
       <dc:creator>NewsArea Staff</dc:creator>
       <category><![CDATA[World Entrepreneurs]]></category>
-      <description>![CDATA[<img src="https://newsarea-me.com/uploads/<?php echo $resultSet['article_pic'] ?>" class="animated animatedFadeInUp fadeInUp" alt="<?php echo $resultSet['title'] ?>"><?php echo $resultSet['short_desc'] ?>]]></description>
+      <description>![CDATA[<img src="https://newsarea-me.com/uploads/<?php echo $resultSet['pic_name'] ?>" class="animated animatedFadeInUp fadeInUp" alt="<?php echo $resultSet['title'] ?>"><?php echo $resultSet['short_desc'] ?>]]></description>
     </item>
 
 <?php }  } ?>

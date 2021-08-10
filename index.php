@@ -85,7 +85,7 @@
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
   $query_author = mysqli_query($connect, $sql_author);
   while ($row_author = mysqli_fetch_array($query_author)){
@@ -95,7 +95,7 @@ $article_pic = $row['article_pic'];
     echo "
     <div class='col-lg' style='margin-bottom:5%'>
     <a href='article.php?id=$id'>
-        <img src='uploads/$article_pic' alt='$title' class='animated animatedFadeInUp fadeInUp' style='width:100%'>
+        <img src='uploads/$pic_name' alt='$title' class='animated animatedFadeInUp fadeInUp' style='width:100%'>
         <span class='badge bg-dark' style='font-size: 14px;margin-top:1%'>$category</span>
         <p style='color:black;font-weight:bold;font-size: 1.2rem;'>$title</p>
         <p class='card-text' style='color: #6c757d!important'><img src='data:image/jpeg;base64,".base64_encode($profile_pic)."' alt='$author' style='width:40px;height:40px;object-fit: cover;border-radius:50%'> By <small class='text-muted' style='color:black !important;font-weight:bold'>$author</small></p>
@@ -114,7 +114,7 @@ $article_pic = $row['article_pic'];
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id'";
   $query_author = mysqli_query($connect, $sql_author);
   while ($row_author = mysqli_fetch_array($query_author)){
@@ -127,7 +127,7 @@ $article_pic = $row['article_pic'];
     <div class='card' style='border: none'>
     <div class='row g-0'>
       <div class='col-md-5'>
-        <img src='uploads/$article_pic' alt='$title' class='animated animatedFadeInUp fadeInUp' style='width:100%;display: block;'>
+        <img src='uploads/$pic_name' alt='$title' class='animated animatedFadeInUp fadeInUp' style='width:100%;display: block;'>
       </div>
       <div class='col'>
         <div class='card-body'>
@@ -148,16 +148,7 @@ $article_pic = $row['article_pic'];
   </div>
     </div>
 
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '4578c8378a4c3fe30e2ec8e45f3345b2',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/4578c8378a4c3fe30e2ec8e45f3345b2/invoke.js"></scr' + 'ipt>');
-</script>
+    
 
 <a href="business.php"><h3 style="color:#030633;font-weight:bold">Business <img src="pics/right-arrow.png" style="max-width: 30px;"></h3></a>
     <br>
@@ -171,7 +162,7 @@ $article_pic = $row['article_pic'];
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
 
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
   $query_author = mysqli_query($connect, $sql_author);
@@ -182,7 +173,7 @@ $article_pic = $row['article_pic'];
     echo "
     <div class='col-lg' style='margin-bottom:5%'>
     <a href='article.php?id=$id'>
-        <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%'>
+        <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%'>
         <span class='badge bg-dark' style='font-size: 14px;margin-top:1%'>$category</span>
         <p style='color:black;font-weight:bold;font-size: 1.2rem;'>$title</p>
         <p style='color: #6c757d!important;line-height: 135%;font-size: 1rem;'>$short_desc</p>
@@ -202,7 +193,7 @@ $article_pic = $row['article_pic'];
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id'";
   $query_author = mysqli_query($connect, $sql_author);
   while ($row_author = mysqli_fetch_array($query_author)){
@@ -215,7 +206,7 @@ $article_pic = $row['article_pic'];
     <div class='card' style='border: none'>
     <div class='row g-0'>
       <div class='col-md-5'>
-        <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;display: block;'>
+        <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;display: block;'>
       </div>
       <div class='col'>
         <div class='card-body'>
@@ -236,16 +227,7 @@ $article_pic = $row['article_pic'];
   </div>
     </div>
 
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '4578c8378a4c3fe30e2ec8e45f3345b2',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/4578c8378a4c3fe30e2ec8e45f3345b2/invoke.js"></scr' + 'ipt>');
-</script>
+    
 
 <a href="#"><h3 style="color:#030633;font-weight:bold">Innovation <img src="pics/right-arrow.png" style="max-width: 30px;"></h3></a>
     <br>
@@ -259,7 +241,7 @@ $article_pic = $row['article_pic'];
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
 
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
   $query_author = mysqli_query($connect, $sql_author);
@@ -270,7 +252,7 @@ $article_pic = $row['article_pic'];
     echo "
     <div class='col-lg' style='margin-bottom:5%'>
     <a href='article.php?id=$id'>
-        <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%'>
+        <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%'>
         <span class='badge bg-dark' style='font-size: 14px;margin-top:1%'>$category</span>
         <p style='color:black;font-weight:bold;font-size: 1.2rem;'>$title</p>
         <p style='color: #6c757d!important;line-height: 135%;font-size: 1rem;'>$short_desc</p>
@@ -290,7 +272,7 @@ $article_pic = $row['article_pic'];
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
   
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id'";
   $query_author = mysqli_query($connect, $sql_author);
@@ -304,7 +286,7 @@ $article_pic = $row['article_pic'];
     <div class='card' style='border: none'>
     <div class='row g-0'>
       <div class='col-md-5'>
-        <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;display: block;'>
+        <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;display: block;'>
       </div>
       <div class='col'>
         <div class='card-body'>
@@ -344,16 +326,7 @@ while ($row = mysqli_fetch_array($query)){
         </div>
     </div>
 
-    <script type="text/javascript">
-	atOptions = {
-		'key' : '4578c8378a4c3fe30e2ec8e45f3345b2',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.gatetodisplaycontent.com/4578c8378a4c3fe30e2ec8e45f3345b2/invoke.js"></scr' + 'ipt>');
-</script>
+    
 
 <a href="#"><h3 style="color:#030633;font-weight:bold">Money <img src="pics/right-arrow.png" style="max-width: 30px;"></h3></a>
     <br>
@@ -367,7 +340,7 @@ while ($row = mysqli_fetch_array($query)){
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
 
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
   $query_author = mysqli_query($connect, $sql_author);
@@ -378,7 +351,7 @@ $article_pic = $row['article_pic'];
     echo "
     <div class='col-lg' style='margin-bottom:5%'>
     <a href='article.php?id=$id'>
-        <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%'>
+        <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%'>
         <span class='badge bg-dark' style='font-size: 14px;margin-top:1%'>$category</span>
         <p style='color:black;font-weight:bold;font-size: 1.2rem;'>$title</p>
         <p style='color: #6c757d!important;line-height: 135%;font-size: 1rem;'>$short_desc</p>
@@ -398,7 +371,7 @@ $article_pic = $row['article_pic'];
   $title = $row['title'];
   $short_desc = $row['short_desc'];
   $category = $row['category'];
-$article_pic = $row['article_pic'];
+$pic_name = $row['pic_name'];
   
   $sql_author = "SELECT * FROM editors WHERE id = '$user_id'";
   $query_author = mysqli_query($connect, $sql_author);
@@ -412,7 +385,7 @@ $article_pic = $row['article_pic'];
     <div class='card' style='border: none'>
     <div class='row g-0'>
       <div class='col-md-5'>
-        <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;display: block;'>
+        <img src='uploads/$pic_name' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;display: block;'>
       </div>
       <div class='col'>
         <div class='card-body'>

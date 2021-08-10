@@ -79,21 +79,22 @@ if(isset($_POST['submit-article'])){
   $short_desc = mysqli_real_escape_string($connect, $_POST['short-desc']);
   $category = $_POST['topic'];
   $article_body = mysqli_real_escape_string($connect, $_POST['article-body']);
+
   $cover= addslashes(file_get_contents($_FILES['article-cover']['tmp_name']));
   $file = $_FILES['article-cover']['tmp_name'];
-  $article_pic = $_FILES["article-cover"]["name"];
-  $destination = 'uploads/'.$article_pic;
+  $pic_name = $_FILES["article-cover"]["name"];
+  $destination = 'uploads/'.$pic_name;
   $file_folder = "../uploads/";
 
   $views = "0";
   $date = date("j F Y");
-  if(move_uploaded_file($file, $file_folder.$article_pic)){
+  if(move_uploaded_file($file, $file_folder.$pic_name)){
   if($title !== "" && $short_desc !== "" && $category !== "" && $article_body !== "") {
-    $sql = "INSERT INTO articles (user_id, visible, title, category, short_desc, long_desc, article_pic, views, date) VALUES ('$user_id', '$visible', '$title', '$category', '$short_desc', '$article_body', '$article_pic', '$views', '$date')";
+    $sql = "INSERT INTO articles (user_id, visible, title, category, short_desc, long_desc, pic_name, views, date) VALUES ('$user_id', '$visible', '$title', '$category', '$short_desc', '$article_body', '$pic_name', '$views', '$date')";
     $query = mysqli_query($connect, $sql);
-    echo "<div class='alert alert-success'>Successful</div>";
+    echo "<div class='alert alert-success'>Your Article is Under Review</div>";
   } else {
-    echo "<div class='alert alert-danger'>Please fill all fields</div>";
+    echo "<div class='alert alert-danger'>Please Fill All Inputs</div>";
   }
 }
 }

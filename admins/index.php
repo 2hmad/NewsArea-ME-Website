@@ -19,6 +19,7 @@
         <input type="submit" name="login" value="Login" style="width: 100%;height: 50px;background: #131313;color: white;font-weight: bold;font-size: 1.1rem;border: none;border-radius: 7px;outline: none;margin-bottom: 5%;">
     </form>
 <?php
+session_start();
 ob_start();
 if(isset($_POST['login'])) {
   $email = $_POST['email'];

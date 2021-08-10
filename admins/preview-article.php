@@ -34,7 +34,7 @@
             $short_desc = $row['short_desc'];
             $long_desc = $row['long_desc'];
             $category = $row['category'];
-          $article_pic = $row['article_pic'];
+            $article_pic = $row['article_pic'];
             $sql_author = "SELECT * FROM editors WHERE id = '$user_id' LIMIT 1";
             $query_author = mysqli_query($connect, $sql_author);
             while ($row_author = mysqli_fetch_array($query_author)){
@@ -44,7 +44,7 @@
               }
             echo "
             <div style='height: 570px;'>
-              <img src='uploads/$article_pic' class='animated animatedFadeInUp fadeInUp card-img-top' alt='$title' style='width: 100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'>
+              <img src='data:image/jpeg;base64,".base64_encode($article_pic)."' class='animated animatedFadeInUp fadeInUp card-img-top' alt='$title' style='width: 100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'>
             </div>
             <span class='badge bg-dark' style='font-size: 14px;margin-top:1%;width:113px'>$category</span>
             <h3 style='font-size: 1.7rem;font-weight: bold;'>$title</h3>

@@ -58,6 +58,7 @@ while($row = mysqli_fetch_array($query)){
     </form>
 <?php
 if(isset($_POST['delete-user'])){
+    $sql_i = "INSERT INTO deleted_editors (email, name, role) VALUES ('$email', '$name', '$role')";
     $sql_d = "DELETE FROM editors WHERE id=$id";
     $query_i = mysqli_query($connect, $sql_i);
     $query_d = mysqli_query($connect, $sql_d);
@@ -75,11 +76,11 @@ if(isset($_POST['delete-user'])){
         $title = $row['title'];
         $short_desc = $row['short_desc'];
         $category = $row['category'];
-      $article_pic = $row['article_pic'];
+        $article_pic = $row['article_pic'];
         echo "
         <div class='col-lg-4' style='margin-bottom:5%'>
         <a href='article.php?id=$id'>
-          <div style='width: 100%;height: 262px;'><img src='../uploads/$article_pic' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'></div>
+          <div style='width: 100%;height: 262px;'><img src='data:image/jpeg;base64,".base64_encode($article_pic)."' class='animated animatedFadeInUp fadeInUp' alt='$title' style='width:100%;height: 100%;object-fit: cover;object-position: center;transition: 1s all ease-in-out;'></div>
             <span style='font-size: 14px;margin-top:1%;color:#000;font-size: .875rem;line-height: 2.14;font-weight: 300;margin: 0px 0px 7px;'>$category</span>
             <p style='color:black;font-weight:bold;font-size: 1.2rem;'>$title</p>
             <p style='color: #6c757d!important;line-height: 135%;font-size: 1rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>$short_desc</p>
