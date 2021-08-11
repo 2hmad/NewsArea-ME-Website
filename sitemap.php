@@ -1,3 +1,16 @@
+
+<?php
+  header('Content-type: application/xml');
+  $host = "us-cdbr-east-04.cleardb.com";
+  $user = "b31560f908280d";
+  $pass = "5ed34ffc";
+  $db = "heroku_a92d341879b202a";
+  $connect = mysqli_connect($host, $user, $pass, $db);
+    
+  $output = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+  $output .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+  echo $output;
+?>
 <url>
 <loc>https://newsarea-me.com/</loc>
 </url>
@@ -46,19 +59,8 @@
 <url>
 <loc>https://newsarea-me.com/entrepreuner</loc>
 </url>
+
 <?php
-  header('Content-type: application/xml');
-  $host = "us-cdbr-east-04.cleardb.com";
-  $user = "b31560f908280d";
-  $pass = "5ed34ffc";
-  $db = "heroku_a92d341879b202a";
-  $connect = mysqli_connect($host, $user, $pass, $db);
-    
-  $output = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
-  $output .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
-  echo $output;
-?>
-  <?php
   $query = "SELECT title, id, date FROM articles";
     $result = mysqli_query($connect, $query);
     $res = array();
