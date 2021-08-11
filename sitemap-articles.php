@@ -1,9 +1,9 @@
 <?php
   header('Content-type: application/xml');
-  $host = "localhost";
-  $user = "xkshetzj_newsarea-admins";
-  $pass = "NewsAreaMiddleEast1";
-  $db = "xkshetzj_newsarea";
+  $host = "us-cdbr-east-04.cleardb.com";
+  $user = "b31560f908280d";
+  $pass = "5ed34ffc";
+  $db = "heroku_a92d341879b202a";
   $connect = mysqli_connect($host, $user, $pass, $db);
     
   $output = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
