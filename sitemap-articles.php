@@ -22,19 +22,21 @@ xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">' . "\n";
   $originalDate = $resultSet['date'];
   $newDate = date("Y-m-d", strtotime($originalDate));
   
-?>
- 
+
+ echo "
 <url>
-  <loc><?php echo 'https://newsarea-me.com'.'/'.'article'.'?'.'id='.$resultSet['id']; ?></loc>
+  <loc>https://newsarea-me.com/article?id=".$resultSet['id']."; ?></loc>
   <news:news>
         <news:publication>
-           <news:name><?php echo $resultSet['title'] ?></news:name>
+           <news:name>".$resultSet['title']."</news:name>
            <news:language>en</news:language>
         </news:publication>
-        <news:publication_date><?php echo "$newDate" ?></news:publication_date>
-        <news:title><?php echo $resultSet['title'] ?></news:title>
+        <news:publication_date>".$newDate."</news:publication_date>
+        <news:title>".$resultSet['title']."</news:title>
   </news:news>
 
-</url>
-<?php }  } ?>
+</url>";
+} 
+}
+?>
 </urlset>
