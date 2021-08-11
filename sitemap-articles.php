@@ -34,7 +34,6 @@ xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">' . "\n";
         <news:publication_date>".$newDate."</news:publication_date>
         <news:title>".$resultSet['title']."</news:title>
   </news:news>
-
 </url>";
 } 
 }
