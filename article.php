@@ -1,14 +1,7 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title><?php
-    ob_start();
-    $host = "localhost";
-    $user = "xkshetzj_newsarea-admins";
-    $pass = "NewsAreaMiddleEast1";
-    $db = "xkshetzj_newsarea";
-    $connect = mysqli_connect($host, $user, $pass, $db); 
-    mysqli_set_charset($connect, 'utf8');   
+    include('connection.php');
     $id = $_GET['id'];
     $sql = "SELECT * FROM articles WHERE (id = $id AND visible > 0)";
     $query = mysqli_query($connect, $sql);
