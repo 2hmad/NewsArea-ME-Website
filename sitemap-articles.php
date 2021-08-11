@@ -10,8 +10,7 @@ $output = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 $output .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
 xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">' . "\n";
 echo $output;
-?>
-<?php
+
 $query = "SELECT title, id, date FROM articles";
 $result = mysqli_query($connect, $query);
 while ($resultSet = mysqli_fetch_assoc($result)) {
