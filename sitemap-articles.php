@@ -25,7 +25,7 @@ xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">' . "\n";
 
  echo "
 <url>
-  <loc>https://newsarea-me.com/article?id=".$resultSet['id']."; ?></loc>
+  <loc>https://newsarea-me.com/article?id=".$resultSet['id']."</loc>
   <news:news>
         <news:publication>
            <news:name>".$resultSet['title']."</news:name>
