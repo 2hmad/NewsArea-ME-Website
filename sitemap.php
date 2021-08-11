@@ -65,11 +65,10 @@ $result = mysqli_query($connect, $query);
 $res = array();
 
 while ($resultSet = mysqli_fetch_assoc($result)) {
-
   if (!empty($resultSet['title'])) {
     echo "
 <url>
-  <loc><?php echo 'https://newsarea-me.com' . '/' . 'article' . '?' . 'id=' . " . $resultSet['id'] . " ?></loc>
+  <loc>https://newsarea-me.com/article?id=" . $resultSet['id'] . " ?></loc>
 </url>
 ";
   }
