@@ -148,7 +148,16 @@ $pic_name = $row['pic_name'];
   </div>
     </div>
 
-    
+<script type="text/javascript">
+	atOptions = {
+		'key' : '4578c8378a4c3fe30e2ec8e45f3345b2',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/4578c8378a4c3fe30e2ec8e45f3345b2/invoke.js"></scr' + 'ipt>');
+</script>
 
 <a href="business.php"><h3 style="color:#030633;font-weight:bold">Business <img src="pics/right-arrow.png" style="max-width: 30px;"></h3></a>
     <br>
