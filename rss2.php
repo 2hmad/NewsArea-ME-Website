@@ -44,9 +44,9 @@
       <description>
         <![CDATA[ <div><img src="https://ar.newsarea-me.com/uploads/<?php echo $resultSet['pic_name'] ?>" style="width: 100%;"><div><?php echo $resultSet['short_desc'] ?></div></div> ]]>
       </description>
-      <link><?php echo 'https://ar.newsarea-me.com'.'/'.'article'.'/'.$resultSet['id']; ?></link>
+      <link><?php echo 'https://newsarea-me.com'.'/'.'article'.'/'.$resultSet['id']; ?></link>
       <dc:creator>NewsArea Staff</dc:creator>
-      <media:content medium="image" url="https://ar.newsarea-me.com/uploads/<?php echo $resultSet['pic_name'] ?>"/>
+      <media:content medium="image" url="https://newsarea-me.com/uploads/<?php echo $resultSet['pic_name'] ?>"/>
     </item>
 
 <?php }  } ?>
