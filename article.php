@@ -181,6 +181,16 @@
                   ?>
             </ul>
 
+<script type="text/javascript">
+	atOptions = {
+		'key' : '7baf2407470b3aa64d123d8a888aa864',
+		'format' : 'iframe',
+		'height' : 300,
+		'width' : 160,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivedisplayformat.com/7baf2407470b3aa64d123d8a888aa864/invoke.js"></scr' + 'ipt>');
+</script>
       </div>
     </div>
     <h4 style="margin-top: 11%;font-weight:bold">Releated Articles</h4>
