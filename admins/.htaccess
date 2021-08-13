@@ -1,6 +1,0 @@
-AuthGroupFile /dev/null
-AuthUserFile /home/xkshetzj/domains/newsarea-me.com/.htpasswd/public_html/admins/.htpasswd
-AuthName "NewsArea Admins"
-ErrorDocument 401 "Unauthorized Access"
-require valid-user
-AuthType Basic
